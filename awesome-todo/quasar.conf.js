@@ -47,7 +47,12 @@ module.exports = function (ctx) {
         'QFooter',
         'QTabs',
         'QTab',
-        'QRouteTab'
+        'QRouteTab',
+        'QList',
+        'QItem',
+        'QItemSection',
+        'QItemLabel',
+        'QCheckbox'
       ],
 
       directives: [
