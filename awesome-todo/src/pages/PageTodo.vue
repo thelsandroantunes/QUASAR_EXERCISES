@@ -16,18 +16,18 @@
 
 
 <script>
-import {mapGetters} from 'vuex'
+	import {mapGetters} from 'vuex'
 
-export default {
+	export default {
 
-	computed: {
-		...mapGetters('tasks', ['tasks'])
-	}, 
+		computed: {
+			...mapGetters('tasks', ['tasks'])
+		}, 
 
-	components: {
-		'task': require('components/Tasks/Task.vue').default
+		components: {
+			'task': require('components/Tasks/Task.vue').default
+		}
 	}
-}
 </script>
 	
 <style>
