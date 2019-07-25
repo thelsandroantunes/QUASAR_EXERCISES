@@ -1,33 +1,33 @@
 <template>
-  <q-page class="q-pa-md">
-  	 <q-list 
-  	 	v-if="Object.keys(tasks).length"
-  	 	separator
-  	 	bordered>
-  	 <task
-  	 	v-for="(task, key) in tasks"
-      	:key="key"
-      	:task="task"
-      	:id="key"></task>
-    
-    </q-list>
+	<q-page class="q-pa-md">
+		<q-list 
+		v-if="Object.keys(tasks).length"
+		separator
+		bordered>
+		<task
+		v-for="(task, key) in tasks"
+		:key="key"
+		:task="task"
+		:id="key"></task>
+		
+	</q-list>
 
-    <div class="absolute-bottom text-center q-mb-lg">
+	<div class="absolute-bottom text-center q-mb-lg">
 		<q-btn
-			@click="showAddTask = true"
-			round
-			color="primary"
-			size="24px"
-			icon="add"
+		@click="showAddTask = true"
+		round
+		color="primary"
+		size="24px"
+		icon="add"
 		/>
-    </div>
+	</div>
 
-    <q-dialog v-model="showAddTask">
-      <add-task @close="showAddTask = false"/>
-    </q-dialog>
+	<q-dialog v-model="showAddTask">
+		<add-task @close="showAddTask = true"/>
+	</q-dialog>
 
 
-  </q-page>
+</q-page>
 
 </template>
 
@@ -39,7 +39,7 @@
 
 		data(){
 			return {
-				showAddTask: false
+				showAddTask: true
 			}
 		},
 
@@ -50,11 +50,11 @@
 		components: {
 			'task': require('components/Tasks/Task.vue').default,
 			'add-task': require('components/Tasks/Modals/AddTask.vue').default
-		
+			
 		}
 	}
 </script>
-	
+
 <style>
 	
 </style>

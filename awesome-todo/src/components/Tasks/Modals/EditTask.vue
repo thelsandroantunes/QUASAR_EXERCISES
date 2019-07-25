@@ -31,20 +31,15 @@
 	import {mapActions} from 'vuex'
 
 	export default {
+		props:['task', 'id'],
 		data(){
 			return {
-				tasktoSubmit: {
-					name: '',					
-					dueDate: '',
-					dueTime: '',
-					completed: false
-
-				}
+				tasktoSubmit: {}
 			}
 		},
 
 		methods: {
-			...mapActions('tasks', ['addTask']),
+			...mapActions('tasks', ['updateTask']),
 			submitForm(){				
 				this.$refs.modalTaskName.$refs.name.validate()
 				if (!this.$refs.modalTaskName.$refs.name.hasError) {
@@ -53,7 +48,10 @@
 			},
 
 			submitTask(){
-				this.addTask(this.tasktoSubmit)
+				this.updateTask({
+					id: this.id,
+					updates: this.tasktoSubmit
+				})
 				this.$emit('close')
 			},
 
@@ -69,6 +67,10 @@
 			'modal-due-date': require('components/Tasks/Modals/Shared/ModalDueDate.vue').default,
 			'modal-due-time': require('components/Tasks/Modals/Shared/ModalDueTime.vue').default,
 			'modal-buttons': require('components/Tasks/Modals/Shared/ModalButtons.vue').default
+		},
+
+		mounted(){
+			this.tasktoSubmit = Object.assign({}, this.task)
 		}
 	}
 	
