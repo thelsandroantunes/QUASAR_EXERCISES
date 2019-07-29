@@ -13,10 +13,10 @@
         </q-btn>
 
         <q-toolbar-title>
-          Awesome Exercise 3
+          Lanche Baré
         </q-toolbar-title>
 
-        <div>Vuex & Forms</div>
+        <div>Beber & Comer</div>
       </q-toolbar>
     </q-header>
 
@@ -35,14 +35,7 @@
             <q-item-label>Exercise</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable to="/solution" exact>
-          <q-item-section avatar>
-            <q-icon name="help" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Solution</q-item-label>
-          </q-item-section>
-        </q-item>
+       
       </q-list>
     </q-drawer>
 

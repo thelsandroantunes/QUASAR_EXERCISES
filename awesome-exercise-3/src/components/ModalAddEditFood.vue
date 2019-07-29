@@ -8,19 +8,28 @@
 
     	<div class="row q-mb-md">
 	      <q-input
+	      	:rules="[
+	          val => !!val || '* Required',
+	          val => val.length < 21 || 'Please use maximum 20 characters',
+	        ]"
 	      	filled
 	      	v-model="foodToSubmit.name"
 	      	label="Name (e.g. Burger)"
-	      	class="col" />
+	      	class="col"
+	      	ref="name" />
     	</div>
 
     	<div class="row q-mb-md">
     		<q-input
+    			:rules="[
+    		    val => val.length < 136 || 'Please use maximum 135 characters',
+    		  ]"
 		      filled
 		      v-model="foodToSubmit.description"
 		      label="Description"
 		      type="textarea"
-		      class="col" />
+		      class="col"
+		      ref="description" />
     	</div>
 
     	<div class="row q-mb-md">
@@ -55,16 +64,18 @@
       	color="grey"
       	v-close-popup />
       <q-btn
+      	@click="submitForm"
       	label="Save"
-      	color="primary"
-      	v-close-popup />
+      	color="primary" />
     </q-card-actions>
   </q-card>
 </template>
 
 <script>
+	import { mapActions } from 'vuex'
+
 	export default {
-		props: ['type'],
+		props: ['type', 'food'],
 		data() {
 			return {
 				foodToSubmit: {
@@ -73,6 +84,31 @@
 					rating: 1,
 					imageUrl: ''
 				}
+			}
+		},
+		methods: {
+			...mapActions('foodsJS', ['addFood', 'updateFood']),
+			submitForm() {
+				this.$refs.name.validate()
+				this.$refs.description.validate()
+
+				if (!this.$refs.name.hasError && !this.$refs.description.hasError) {
+					this.$emit('close')
+					this.submitFood()
+				}
+			},
+			submitFood() {
+				if (this.type == 'add') {
+					this.addFood(this.foodToSubmit)
+				}
+				else {
+					this.updateFood(this.foodToSubmit)
+				}
+			}
+		},
+		mounted() {
+			if (this.type == 'edit') {
+				this.foodToSubmit = Object.assign({},this.food)
 			}
 		}
 	}
