@@ -64,12 +64,15 @@ module.exports = function (ctx) {
         'QTime',
         'QForm',
         'QBanner',
-        'QSelect'
+        'QSelect',
+        'QScrollArea'
+
       ],
 
       directives: [
         'Ripple',
-        'ClosePopup'
+        'ClosePopup',
+        'TouchHold'
       ],
 
       // Quasar plugins
@@ -99,7 +102,7 @@ module.exports = function (ctx) {
     },
 
     // animations: 'all', // --- includes all animations
-    animations: [],
+    animations: ['zoomIn','zoomOut'],
 
     ssr: {
       pwa: false

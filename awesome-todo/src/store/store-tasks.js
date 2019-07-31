@@ -6,24 +6,108 @@ const state = {
 	tasks: {
 		'ID1':{
 			
-			name: 'go to shop',
+			name: 'Go to shop',
 			completed: false,
 			dueDate: '2019/05/12',
 			dueTime: '11:30'
 		},
 		'ID2':{
 			
-			name: 'get bananas',
+			name: 'Get bananas',
 			completed: false,
 			dueDate: '2019/05/13',
 			dueTime: '14:00'	
 		},
 		'ID3':{
 			
-			name: 'get apples',
+			name: 'Get apples',
 			completed: false,
 			dueDate: '2019/05/14',
 			dueTime: '18:45'	
+		},
+		'ID4':{
+			
+			name: 'Go to shop',
+			completed: false,
+			dueDate: '2019/05/12',
+			dueTime: '11:30'
+		},
+		'ID5':{
+			
+			name: 'Get bananas',
+			completed: false,
+			dueDate: '2019/05/13',
+			dueTime: '14:00'	
+		},
+		'ID6':{
+			
+			name: 'Get apples',
+			completed: false,
+			dueDate: '2019/05/14',
+			dueTime: '18:45'	
+		},
+		'ID7':{
+			
+			name: 'Go to shop',
+			completed: false,
+			dueDate: '2019/05/12',
+			dueTime: '11:30'
+		},
+		'ID8':{
+			
+			name: 'Get bananas',
+			completed: false,
+			dueDate: '2019/05/13',
+			dueTime: '14:00'	
+		},
+		'ID9':{
+			
+			name: 'Get apples',
+			completed: false,
+			dueDate: '2019/05/14',
+			dueTime: '18:45'	
+		},
+		'ID10':{
+			
+			name: 'Go to shop',
+			completed: false,
+			dueDate: '2019/05/12',
+			dueTime: '11:30'
+		},
+		'ID11':{
+			
+			name: 'Go to shop',
+			completed: false,
+			dueDate: '2019/05/12',
+			dueTime: '11:30'
+		},
+		'ID12':{
+			
+			name: 'Get bananas',
+			completed: false,
+			dueDate: '2019/05/13',
+			dueTime: '14:00'	
+		},
+		'ID13':{
+			
+			name: 'Get apples',
+			completed: false,
+			dueDate: '2019/05/14',
+			dueTime: '18:45'	
+		},
+		'ID14':{
+			
+			name: 'Go to shop',
+			completed: false,
+			dueDate: '2019/05/12',
+			dueTime: '11:30'
+		},
+		'ID15':{
+			
+			name: 'Get bananas',
+			completed: false,
+			dueDate: '2019/05/13',
+			dueTime: '14:00'	
 		}
 	},
 	search: '',

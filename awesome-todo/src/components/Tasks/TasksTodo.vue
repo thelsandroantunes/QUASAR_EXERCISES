@@ -1,4 +1,9 @@
 <template>
+	<transition
+	appear
+	enter-active-class="animated zoomIn"
+	leave-active-class="animated zoomOut absolute-top"
+	>
 	<div>
 		<list-header
 			bgColor="bg-orange-4"
@@ -14,6 +19,7 @@
 		
 	</q-list>
 </div>
+</transition>
 </template>
 
 <script>

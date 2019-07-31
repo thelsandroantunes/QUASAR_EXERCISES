@@ -29,9 +29,11 @@
 
 <script>
 	import {mapActions} from 'vuex'
+	import mixinAddEditTask from 'src/mixins/mixin-add-edit-task'
 
 	export default {
 		props:['task', 'id'],
+		mixins: [mixinAddEditTask],
 		data(){
 			return {
 				tasktoSubmit: {}
@@ -40,35 +42,14 @@
 
 		methods: {
 			...mapActions('tasks', ['updateTask']),
-			submitForm(){				
-				this.$refs.modalTaskName.$refs.name.validate()
-				if (!this.$refs.modalTaskName.$refs.name.hasError) {
-					this.submitTask()
-				}
-			},
-
 			submitTask(){
 				this.updateTask({
 					id: this.id,
 					updates: this.tasktoSubmit
 				})
 				this.$emit('close')
-			},
-
-			clearDueDate(){
-				this.tasktoSubmit.dueDate = ''
-				this.tasktoSubmit.dueTime = ''
 			}
 		},
-
-		components: {
-			'modal-header': require('components/Tasks/Modals/Shared/ModalHeader.vue').default,
-			'modal-task-name': require('components/Tasks/Modals/Shared/ModalTaskName.vue').default,
-			'modal-due-date': require('components/Tasks/Modals/Shared/ModalDueDate.vue').default,
-			'modal-due-time': require('components/Tasks/Modals/Shared/ModalDueTime.vue').default,
-			'modal-buttons': require('components/Tasks/Modals/Shared/ModalButtons.vue').default
-		},
-
 		mounted(){
 			this.tasktoSubmit = Object.assign({}, this.task)
 		}
