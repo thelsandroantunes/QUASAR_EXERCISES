@@ -8,21 +8,19 @@
 			<p v-if="search && !Object.keys(tasksTodo).length && !Object.keys(tasksCompleted).length">No search results.</p>
 
 			<q-scroll-area class="q-scroll-area-tasks">
+				<no-tasks
+				v-if="!Object.keys(tasksTodo).length && !search && !settings.showTasksInOneList"
+				></no-tasks>
 
-				<div class="relative-position">
-					<no-tasks
-					v-if="!Object.keys(tasksTodo).length && !search"
-					></no-tasks>
+				<tasks-todo 
+				v-if="Object.keys(tasksTodo).length"
+				:tasksTodo="tasksTodo"/>		
 
-					<tasks-todo 
-					v-if="Object.keys(tasksTodo).length"
-					:tasksTodo="tasksTodo"/>		
-
-					<tasks-completed
-					v-if="Object.keys(tasksCompleted).length"
-					:tasksCompleted="tasksCompleted"
-					class="q-mb-xl"/>	
-				</div>
+				<tasks-completed
+				v-if="Object.keys(tasksCompleted).length"
+				:tasksCompleted="tasksCompleted"
+				class="q-mb-xl"/>	
+				
 			</q-scroll-area>
 			<div class="absolute-bottom text-center q-mb-lg no-pointer-events">
 				<q-btn
@@ -60,6 +58,7 @@
 
 		computed: {
 			...mapGetters('tasks', ['tasksTodo','tasksCompleted']),
+			...mapGetters('settings', ['settings']),
 			...mapState('tasks', ['search'])
 		}, 
 

@@ -65,7 +65,8 @@ module.exports = function (ctx) {
         'QForm',
         'QBanner',
         'QSelect',
-        'QScrollArea'
+        'QScrollArea',
+        'QToggle'
 
       ],
 
@@ -78,7 +79,8 @@ module.exports = function (ctx) {
       // Quasar plugins
       plugins: [
         'Notify',
-        'Dialog'
+        'Dialog',
+        'LocalStorage',
       ]
     },
 
