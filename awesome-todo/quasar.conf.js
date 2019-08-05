@@ -6,12 +6,12 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     boot: [
-      'firebase',
-      'router-auth'
+    'firebase',
+    'router-auth'
     ],
 
     css: [
-      'app.styl'
+    'app.styl'
     ],
 
     extras: [
@@ -24,68 +24,69 @@ module.exports = function (ctx) {
 
       'roboto-font', // optional, you are not bound to it
       'material-icons' // optional, you are not bound to it
-    ],
+      ],
 
-    framework: {
+      framework: {
       // iconSet: 'ionicons-v4',
       // lang: 'de', // Quasar language
 
       // all: true, // --- includes everything; for dev only!
 
       components: [
-        'QLayout',
-        'QHeader',
-        'QDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QItem',
-        'QItemSection',
-        'QItemLabel',
-        'QFooter',
-        'QTabs',
-        'QTab',
-        'QRouteTab',
-        'QList',
-        'QItem',
-        'QItemSection',
-        'QItemLabel',
-        'QCheckbox',
-        'QDialog',
-        'QCard',
-        'QCardSection',
-        'QCardActions',
-        'QSpace',
-        'QInput',
-        'QDate',
-        'QPopupProxy',
-        'QTime',
-        'QForm',
-        'QBanner',
-        'QSelect',
-        'QScrollArea',
-        'QToggle',
-        'QTabPanels',
-        'QTabPanel',
-        'QSeparator'
+      'QLayout',
+      'QHeader',
+      'QDrawer',
+      'QPageContainer',
+      'QPage',
+      'QToolbar',
+      'QToolbarTitle',
+      'QBtn',
+      'QIcon',
+      'QList',
+      'QItem',
+      'QItemSection',
+      'QItemLabel',
+      'QFooter',
+      'QTabs',
+      'QTab',
+      'QRouteTab',
+      'QList',
+      'QItem',
+      'QItemSection',
+      'QItemLabel',
+      'QCheckbox',
+      'QDialog',
+      'QCard',
+      'QCardSection',
+      'QCardActions',
+      'QSpace',
+      'QInput',
+      'QDate',
+      'QPopupProxy',
+      'QTime',
+      'QForm',
+      'QBanner',
+      'QSelect',
+      'QScrollArea',
+      'QToggle',
+      'QTabPanels',
+      'QTabPanel',
+      'QSeparator',
+      'QSpinner'
 
       ],
 
       directives: [
-        'Ripple',
-        'ClosePopup',
-        'TouchHold'
+      'Ripple',
+      'ClosePopup',
+      'TouchHold'
       ],
 
       // Quasar plugins
       plugins: [
-        'Notify',
-        'Dialog',
-        'LocalStorage',
+      'Notify',
+      'Dialog',
+      'LocalStorage',
       ]
     },
 
@@ -127,31 +128,31 @@ module.exports = function (ctx) {
         background_color: '#ffffff',
         theme_color: '#027be3',
         icons: [
-          {
-            'src': 'statics/icons/icon-128x128.png',
-            'sizes': '128x128',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-192x192.png',
-            'sizes': '192x192',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-256x256.png',
-            'sizes': '256x256',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-384x384.png',
-            'sizes': '384x384',
-            'type': 'image/png'
-          },
-          {
-            'src': 'statics/icons/icon-512x512.png',
-            'sizes': '512x512',
-            'type': 'image/png'
-          }
+        {
+          'src': 'statics/icons/icon-128x128.png',
+          'sizes': '128x128',
+          'type': 'image/png'
+        },
+        {
+          'src': 'statics/icons/icon-192x192.png',
+          'sizes': '192x192',
+          'type': 'image/png'
+        },
+        {
+          'src': 'statics/icons/icon-256x256.png',
+          'sizes': '256x256',
+          'type': 'image/png'
+        },
+        {
+          'src': 'statics/icons/icon-384x384.png',
+          'sizes': '384x384',
+          'type': 'image/png'
+        },
+        {
+          'src': 'statics/icons/icon-512x512.png',
+          'sizes': '512x512',
+          'type': 'image/png'
+        }
         ]
       }
     },
