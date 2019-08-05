@@ -1,8 +1,8 @@
-import { Dialog, Loading} from 'quasar'
+import { Dialog, Loading } from 'quasar'
 
-export function showErrorMessage(errorMessage){
+export function showErrorMessage(errorMessage) {
 	Loading.hide()
-	Dialog.create({ 
+	Dialog.create({
 		title: 'Error',
 		message: errorMessage
 	})

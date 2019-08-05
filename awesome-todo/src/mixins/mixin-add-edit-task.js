@@ -1,14 +1,14 @@
 export default {
-	methods: { 
-		submitForm(){				
+	methods: {
+		submitForm() {
 			this.$refs.modalTaskName.$refs.name.validate()
 			if (!this.$refs.modalTaskName.$refs.name.hasError) {
 				this.submitTask()
 			}
 		},
-		clearDueDate(){
-			this.tasktoSubmit.dueDate = ''
-			this.tasktoSubmit.dueTime = ''
+		clearDueDate() {
+			this.taskToSubmit.dueDate = ''
+			this.taskToSubmit.dueTime = ''
 		}
 	},
 	components: {

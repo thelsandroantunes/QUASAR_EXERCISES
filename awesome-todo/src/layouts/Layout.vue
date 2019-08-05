@@ -1,45 +1,41 @@
 <template>
-  <q-layout view="hHh lpR lFf">
-
+  <q-layout view="hHh lpR fFf">
     <q-header elevated>
-      <q-toolbar>        
+      <q-toolbar>
 
         <q-toolbar-title class="absolute-center">
-          SEC-AM: BASIC TEST
+          Awesome Todo
         </q-toolbar-title>
 
-        <q-btn 
-        v-if="!loggedIn"
-        to="/auth"
-        flat
-        icon-right="account_circle" 
-        label="Login" 
-        class="absolute-right"/>
+        <q-btn
+          v-if="!loggedIn"
+          to="/auth"
+          flat
+          icon-right="account_circle"
+          label="Login"
+          class="absolute-right" />
 
-        <q-btn 
-        v-else  
-        @click="logoutUser"      
-        flat
-        icon-right="account_circle" 
-        label="Logout" 
-        class="absolute-right"/>
-    
+        <q-btn
+          v-else
+          @click="logoutUser"
+          flat
+          icon-right="account_circle"
+          label="Logout"
+          class="absolute-right" />
+
       </q-toolbar>
     </q-header>
 
     <q-footer>
-      <q-tabs
-       >
-        <q-route-tab    
-          v-for="nav in navs"   
+      <q-tabs>
+        <q-route-tab
+          v-for="nav in navs"
           :key="nav.label"
-          :to="nav.to"    
-          :icon="nav.icon" 
+          :to="nav.to"
+          :icon="nav.icon"
           :label="nav.label" />
-        
       </q-tabs>
     </q-footer>
-
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -50,8 +46,8 @@
     >
       <q-list dark>
         <q-item-label header>Navigation</q-item-label>
-        
-        <q-item 
+
+        <q-item
           v-for="nav in navs"
           :key="nav.label"
           :to="nav.to"
@@ -62,11 +58,10 @@
             <q-icon :name="nav.icon" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>{{nav.label}}</q-item-label>           
+            <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
-        </q-item>    
-
-       
+        </q-item>
+        
       </q-list>
     </q-drawer>
 
@@ -77,48 +72,47 @@
 </template>
 
 <script>
-  import {mapState, mapActions} from 'vuex'
-import { openURL } from 'quasar'
+  import { mapState, mapActions } from 'vuex'
+  import { openURL } from 'quasar'
 
-export default {
-  name: 'Layout',
-  data () {
-    return {
-      leftDrawerOpen: this.$q.platform.is.desktop,
-      navs: [
-        {
-          label: 'Todo',
-          icon:'list',
-          to:'/'
-        },
-
-        {
-          label: 'Settings',
-          icon:'settings',
-          to:'/settings'
-        }
-      ]
+  export default {
+    name: 'MyLayout',
+    data () {
+      return {
+        leftDrawerOpen: this.$q.platform.is.desktop,
+        navs: [
+          {
+            label: 'Todo',
+            icon: 'list',
+            to: '/'
+          },
+          {
+            label: 'Settings',
+            icon: 'settings',
+            to: '/settings'
+          }
+        ]
+      }
+    },
+    computed: {
+      ...mapState('auth', ['loggedIn'])
+    },
+    methods: {
+      ...mapActions('auth', ['logoutUser']),
+      openURL
     }
-  },
-  methods: {
-     ...mapActions('auth',['logoutUser']),
-    openURL
-  },
-  computed: {
-    ...mapState('auth', ['loggedIn'])
   }
-}
 </script>
 
 <style lang="scss">
-  @media screen and (min-width: 768px){
-    .q-footer{
+  @media screen and (min-width: 768px) {
+    .q-footer {
       display: none;
     }
   }
-
+  
   .q-drawer {
-    .q-router-link--exact-active{
+    .q-router-link--exact-active {
       color: white !important;
     }
   }

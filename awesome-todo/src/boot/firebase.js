@@ -1,9 +1,7 @@
+import * as firebase from "firebase/app"
 
-var firebase = require("firebase/app");
-
-
-require("firebase/auth");
-require("firebase/firestore");
+import "firebase/auth"
+import "firebase/database"
 
 
 var firebaseConfig = {
@@ -18,5 +16,6 @@ var firebaseConfig = {
 
 let firebaseApp = firebase.initializeApp(firebaseConfig)
 let firebaseAuth = firebaseApp.auth()
+let firebaseDb = firebaseApp.database()
 
-export {firebaseAuth}
+export { firebaseAuth, firebaseDb }
