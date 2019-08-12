@@ -5,7 +5,7 @@
 	@keyup.esc="searchField = ''"
 	v-select-all
 	class="col"
-	label="Search" >
+	label="Pesquisar" >
 		
 	<template v-slot:append>
 		<q-icon v-if="searchField !== ''" name="close" @click="searchField = ''" class="cursor-pointer" />

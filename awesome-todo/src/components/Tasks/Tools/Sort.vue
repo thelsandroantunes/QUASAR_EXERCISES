@@ -19,11 +19,11 @@
 				
 				options: [
 					{
-						label: 'Name',
+						label: 'Descrição',
 						value: 'name'
 					},
 					{
-						label: 'Date',
+						label: 'Data',
 						value: 'dueDate'
 					}
 				]

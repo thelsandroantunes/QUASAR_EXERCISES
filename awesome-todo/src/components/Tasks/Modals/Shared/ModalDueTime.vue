@@ -3,7 +3,7 @@
 	class="row q-mb-sm">
 	<q-input 
 	outlined 
-	label="Due Time"
+	label="Hora limite"
 	:value="dueTime"
 	@input="$emit('update:dueTime', $event)"
 	class="col">

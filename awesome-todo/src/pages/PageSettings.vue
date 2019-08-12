@@ -4,11 +4,11 @@
 		class="q-mb-md"
 		bordered 
 		padding>
-			<q-item-label header>Settings</q-item-label>
+			<q-item-label header>Configuração</q-item-label>
 
 			<q-item tag="label" v-ripple>
 				<q-item-section>
-					<q-item-label>Show 12 hour time format</q-item-label>
+					<q-item-label>Mostrar o formato de 12 horas</q-item-label>
 				</q-item-section>
 				<q-item-section side >
 					<q-toggle 
@@ -21,7 +21,7 @@
 			tag="label" 
 			v-ripple>
 				<q-item-section>
-					<q-item-label>Show tasks in one list</q-item-label>
+					<q-item-label>Mostrar tarefas numa lista</q-item-label>
 				</q-item-section>
 				<q-item-section side >
 					<q-toggle 
@@ -33,14 +33,14 @@
 		</q-list>
 
 		<q-list bordered padding>
-			<q-item-label header>More</q-item-label>
+			<q-item-label header>Contato</q-item-label>
 
 			<q-item 
 			to="/settings/help"
 			tag="label" 
 			v-ripple>
 				<q-item-section>
-					<q-item-label>Help</q-item-label>
+					<q-item-label>Ajuda</q-item-label>
 				</q-item-section>
 				<q-item-section side >
 					<q-icon name="chevron_right"/>
@@ -52,7 +52,7 @@
 			tag="label" 
 			v-ripple>
 				<q-item-section>
-					<q-item-label>Visit our website</q-item-label>
+					<q-item-label>Visite meu GitHub</q-item-label>
 				</q-item-section>
 				<q-item-section side >
 					<q-icon name="chevron_right"/>
@@ -64,7 +64,7 @@
 			tag="label" 
 			v-ripple>
 				<q-item-section>
-					<q-item-label>Email us</q-item-label>
+					<q-item-label>Email</q-item-label>
 				</q-item-section>
 				<q-item-section side >
 					<q-icon name="chevron_right"/>

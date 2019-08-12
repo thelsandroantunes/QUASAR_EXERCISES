@@ -1,7 +1,7 @@
 <template>
 	<q-card>
 
-		<modal-header>Add Task</modal-header>
+		<modal-header>Add Nota</modal-header>
 
 		<q-form @submit.prevent="submitForm">			
 
@@ -30,7 +30,6 @@
 <script>
 	import {mapActions} from 'vuex'
 	import mixinAddEditTask from 'src/mixins/mixin-add-edit-task'
-
 	export default {
 		mixins: [mixinAddEditTask],
 		data(){
@@ -40,23 +39,18 @@
 					dueDate: '',
 					dueTime: '',
 					completed: false
-
 				}
 			}
 		},
-
 		methods: {
 			...mapActions('tasks', ['addTask']),
-
 			submitTask(){
 				this.addTask(this.tasktoSubmit)
 				this.$emit('close')
 			}
 		},
-
 		
-	}
-	
+	}	
 </script>
 
 <style type="text/css">

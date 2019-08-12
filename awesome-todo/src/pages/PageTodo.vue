@@ -1,5 +1,5 @@
 <template>
-	<q-page >		
+	<q-page >
 
 		<div class="q-pa-md absolute full-width full-height column">
 
@@ -8,7 +8,7 @@
 					<search/>	
 					<sort/>
 				</div>
-				<p v-if="search && !Object.keys(tasksTodo).length && !Object.keys(tasksCompleted).length">No search results.</p>
+				<p v-if="search && !Object.keys(tasksTodo).length && !Object.keys(tasksCompleted).length">Nenhum resultado encontrado.</p>
 
 				<q-scroll-area class="q-scroll-area-tasks">
 					<no-tasks

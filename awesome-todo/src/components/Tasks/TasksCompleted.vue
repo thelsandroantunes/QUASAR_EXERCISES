@@ -8,7 +8,7 @@
 			:class="{ 'q-mt-lg' : !settings.showTasksInOneList }">
 			<list-header
 				v-if="!settings.showTasksInOneList"
-				bgColor="bg-green-4">Completed</list-header>
+				bgColor="bg-green-4">Finalizada</list-header>
 			<q-list 
 				separator
 				bordered>

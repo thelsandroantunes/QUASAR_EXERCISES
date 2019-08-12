@@ -3,7 +3,7 @@
 	class="row q-mb-sm">
 	<q-input 
 	outlined
-	label="Due Date"
+	label="Data limite"
 	:value="dueDate"
 	@input="$emit('update:dueDate', $event)">
 	<template v-slot:append>

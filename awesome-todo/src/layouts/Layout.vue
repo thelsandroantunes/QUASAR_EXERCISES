@@ -4,7 +4,7 @@
       <q-toolbar>
 
         <q-toolbar-title class="absolute-center">
-          Awesome Todo
+          AnotaBr
         </q-toolbar-title>
 
         <q-btn
@@ -45,7 +45,7 @@
       content-class="bg-primary"
     >
       <q-list dark>
-        <q-item-label header>Navigation</q-item-label>
+        <q-item-label header>Navegação</q-item-label>
 
         <q-item
           v-for="nav in navs"
@@ -82,12 +82,12 @@
         leftDrawerOpen: this.$q.platform.is.desktop,
         navs: [
           {
-            label: 'Todo',
+            label: 'Nota',
             icon: 'list',
             to: '/'
           },
           {
-            label: 'Settings',
+            label: 'Configuração',
             icon: 'settings',
             to: '/settings'
           }

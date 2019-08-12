@@ -8,7 +8,7 @@
 		v-select-all
 		autofocus
 		ref="name"
-		label="Task name" 
+		label="Descrição" 
 		class="col">
 
 		<template v-slot:append>

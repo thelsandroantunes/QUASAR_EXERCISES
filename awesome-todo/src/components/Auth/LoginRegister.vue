@@ -5,13 +5,13 @@
 			  <template v-slot:avatar>
 			    <q-icon name="account_circle" color="primary" />
 			  </template>
-			  {{ tab | titleCase }} to access your Todos anywhere!
+			  Faça {{ tab | titleCase }} para acessar suas anotações em qualquer lugar!
 			</q-banner>
 		</div>
 		<div class="row q-mb-md">
 			<q-input
 				v-model="formData.email"
-				:rules="[ val => isValidEmailAddress(val) || 'Please enter a valid email address.']"
+				:rules="[ val => isValidEmailAddress(val) || 'Por favor entre com E-mail válido.']"
 				ref="email"
 				lazy-rules
 				outlined
@@ -22,7 +22,7 @@
 		<div class="row q-mb-md">
 			<q-input
 				v-model="formData.password"
-				:rules="[ val => val.length >= 6 || 'Please enter at least 6 characters.']"
+				:rules="[ val => val.length >= 6 || 'Por favor entre com pelo menos 6 caracteres.']"
 				ref="password"
 				lazy-rules
 				type="password"

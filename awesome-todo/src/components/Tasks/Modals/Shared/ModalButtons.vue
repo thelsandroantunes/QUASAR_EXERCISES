@@ -1,7 +1,7 @@
 <template>
 	<q-card-actions align="right">
 		<q-btn 
-			label="Save" 
+			label="Salvar" 
 			color="primary" 
 			type="submit"/>
 	</q-card-actions>  
