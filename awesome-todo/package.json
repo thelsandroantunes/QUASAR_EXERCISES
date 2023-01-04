@@ -17,7 +17,7 @@
     "vuex-simple": "^2.1.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.4",
+    "@quasar/app": "^3.3.3",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.2.0",
     "webpack": "^4.39.1"
